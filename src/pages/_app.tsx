@@ -171,12 +171,12 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
 
-export const AppSettings: React.FC = (props) => {
-  const { data, isLoading: loading, error } = useSettingsQuery();
-  if (loading) return <PageLoader />;
-  if (error) return <ErrorMessage message={error.message} />;
-  return <SettingsProvider initialValue={data?.settings?.options} {...props} />;
-};
+// export const AppSettings: React.FC = (props) => {
+//   const { data, isLoading: loading, error } = useSettingsQuery();
+//   if (loading) return <PageLoader />;
+//   if (error) return <ErrorMessage message={error.message} />;
+//   return <SettingsProvider initialValue={data?.settings?.options} {...props} />;
+// };
 
 const CustomApp: any = ({ Component, pageProps }: AppPropsWithLayout) => {
   // Use the layout defined at the page level, if available
