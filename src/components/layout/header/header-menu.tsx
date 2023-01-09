@@ -139,6 +139,7 @@
 // export default HeaderMenu;
 import React from 'react';
 import Tippy from '@tippyjs/react/headless'
+
 import 'tippy.js/dist/tippy.css';
 
 // const showSubMenu:React.FC = () => {
@@ -314,16 +315,38 @@ const HeaderMenu: React.FC = () => {
             </a>
           </div>
           <div className="w-[350px]   items-center relative">
-            <input
-              className=" border-solid border-2  h-[35px] bg-[#ededed] rounded-[100px] w-[100%] pl-[10px] placeholder:italic outline-none "
-              type="text"
-              placeholder="Tìm kiếm nhanh"
-            />
-            <img
-              className=" absolute top-[9px] right-2 bg-[#ededed]"
-              src="https://cdn.pnj.io/images/image-update/layout/mobile/find-icon.svg"
-              alt="Tìm kiếm nhanh"
-            />
+         
+                {/* <input
+                  className=" border-solid border-2  h-[35px] bg-[#ededed] rounded-[100px] w-[100%] pl-[10px] placeholder:italic outline-none "
+                  type="text"
+                  placeholder="Tìm kiếm nhanh"
+                />
+                <img
+                  className=" absolute top-[9px] right-2 bg-[#ededed]"
+                  src="https://cdn.pnj.io/images/image-update/layout/mobile/find-icon.svg"
+                  alt="Tìm kiếm nhanh"
+                /> */}
+             <Tippy
+             trigger="click"
+            placement= 'bottom-end'
+    render={attrs => (
+      <div>Not Found</div>
+    )}
+  >
+     <div>
+         <input
+                    className=" border-solid border-2  h-[35px] bg-[#ededed] rounded-[100px] w-[100%] pl-[10px] placeholder:italic outline-none "
+                    type="text"
+                    placeholder="Tìm kiếm nhanh"
+                  />
+                   <img
+                    className=" absolute top-[9px] right-2 bg-[#ededed]"
+                    src="https://cdn.pnj.io/images/image-update/layout/mobile/find-icon.svg"
+                    alt="Tìm kiếm nhanh"
+                  />
+     </div>
+  </Tippy>
+ 
           </div>
         </div>
       </div>

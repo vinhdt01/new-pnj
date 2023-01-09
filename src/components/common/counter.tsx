@@ -22,7 +22,7 @@ const Counter: React.FC<CounterProps> = ({
   return (
     <div
       className={cn(
-        "group flex items-center justify-between rounded-md overflow-hidden flex-shrink-0",
+        "mt-4 group flex items-center justify-between rounded-md overflow-hidden flex-shrink-0",
         {
           "border h-11 md:h-12 border-gray-300": variant === "default",
           "h-8 md:h-9 shadow-navigation bg-heading": variant === "dark",

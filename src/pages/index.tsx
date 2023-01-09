@@ -62,8 +62,7 @@
 
 // Home.getLayout = getLayout;
 
-
-
+import { useState , useEffect } from "react";
 import BannerCard from "@components/common/banner-card";
 import Container from "@components/ui/container";
 import BrandGridBlock from "@containers/brand-grid-block";
@@ -93,37 +92,50 @@ import {
 // export { getStaticProps } from "@framework/ssr/homepage/modern";
 
 export default function Home() {
+  
+const [swiperKey, setSwiperKey] = useState(0);
+
+useEffect(() => {
+  setSwiperKey(1);
+}, []);
+
   return (
     <>
           <BannerSliderBlock data={promotionBanner} />
 
       <BannerBlock data={masonryBanner} /> 
-     <Container>
+     {/* <Container>
         <ProductsFlashSaleBlock   variant="default"/>
-      </Container>
+      </Container> */}
       <Container>
         <CategoryBlock sectionHeading="text-shop-by-category" variant="rounded" />
-        <ProductsFeatured sectionHeading="text-featured-products" />
+        <ProductsFeatured sectionHeading="text-featured-products" title="Sản Phẩm Bán Chạy"/>
         <BannerCard
           data={banner[0]}
           href={`${ROUTES.COLLECTIONS}/${banner[0].slug}`}
           className="mb-12 lg:mb-14 xl:mb-16 pb-0.5 lg:pb-1 xl:pb-0"
         />
-                <ProductsFeatured sectionHeading="text-featured-products" />
+               <ProductsFeatured sectionHeading="text-featured-products" title="Sản Phẩm Mới"/>
 
         <BannerCard
           data={banner[1]}
           href={`${ROUTES.COLLECTIONS}/${banner[1].slug}`}
           className="mb-12 lg:mb-14 xl:mb-16 pb-0.5 lg:pb-1 xl:pb-0"
         />
-               <ProductsFeatured sectionHeading="text-featured-products" />
+               <ProductsFeatured sectionHeading="text-featured-products" title="Trang Sức Kim Tiền"/>
+               <BannerCard
+          data={banner[1]}
+          href={`${ROUTES.COLLECTIONS}/${banner[1].slug}`}
+          className="mb-12 lg:mb-14 xl:mb-16 pb-0.5 lg:pb-1 xl:pb-0"
+        />
+               <ProductsFeatured sectionHeading="text-featured-products" title="Trang Sức Phong Thủy"/>
    <ShowMoreBtn/>
         <ExclusiveBlock />
         {/* <NewArrivalsProductFeed /> */}
-        <DownloadApps />
+        {/* <DownloadApps />
         <Support />
         <Instagram />
-        <Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" />
+        <Subscription className="bg-opacity-0 px-5 sm:px-16 xl:px-0 py-12 md:py-14 xl:py-16" /> */}
       </Container>
       <Divider className="mb-0" />
     </>

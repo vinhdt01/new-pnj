@@ -1,13 +1,18 @@
 import Notification from '@components/notifications/notification'
+import { type } from 'os'
 import {useState} from 'react'
+
 const NotificationIcon:React.FC = () => {
     const [show , setShow] = useState<boolean>(false)
+    const functionHanleShow = () => {
+        setShow(false)
+    }
     return (
         <div>
             <button onClick={() => setShow(!show)}>
           <img src="https://cdn.pnj.io/images/image-update/layout/mobile/noti-default.svg" />
         </button>
-        {show && <Notification/>}
+        {show && <Notification functionHanleShow={functionHanleShow}/>}
         </div>
     )
 }

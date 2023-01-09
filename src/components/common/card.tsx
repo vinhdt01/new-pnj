@@ -161,12 +161,12 @@ const Card: React.FC<Props> = () => {
   	return (
 		<Link
 			href="#"
-			className={`group flex justify-center text-left rounded-lg px-6 lg:px-8 pt-7 lg:pt-10 pb-5 lg:pb-8 bg-gray-200" flex-col relative `}
+			className={`group flex justify-center text-center rounded-lg px-4 lg:px-8 pt-7 lg:pt-10 pb-5 lg:pb-8 bg-gray-200" flex-col relative w-full`}
 		>
 			<div
 				className={`relative inline-flex   rounded-md  mb-3.5 md:mb-4 lg:mb-5 xl:mb-6 `}
 			>
-				<div className="flex">
+				<div className="flex ">
 					<img
 						src="https://cdn.pnj.io/images/image-update/2022/hot-categories/trang-suc-vang.png"
 						alt="text-card-thumbnail"
@@ -180,7 +180,7 @@ const Card: React.FC<Props> = () => {
 		
 			
 				<Text
-					className='text-body text-sm sm:leading-6 leading-7 pb-0.5 truncate text-center'
+					className='text-body text-sm sm:leading-6 leading-5 pb-0.5  text-[12px] text-center'
 				>
 					Trang sức vàng
 				</Text>

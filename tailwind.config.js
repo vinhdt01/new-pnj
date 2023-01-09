@@ -70,12 +70,29 @@ module.exports = {
       },
       animation: {
         shine: "shine 1s",
+        popup:"popup 0.1s linear "
       },
       keyframes: {
         shine: {
           "100%": { left: "125%" },
         },
+        popup: {
+          '0%':{
+            transform: 'scale(0.3)'
+          },
+          '50%':{
+            transform: 'scale(0.6)'
+          },
+          '85%':{
+            transform: 'scale(0.8)'
+          },
+         
+          '100%':{
+            transform: 'scale(1)'
+          }
+        }
       },
+      
     },
     boxShadow: {
       cart: "0 3px 6px rgba(0,0,0,0.12)",

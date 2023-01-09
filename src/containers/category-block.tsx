@@ -226,7 +226,7 @@ const breakpoints = {
   },
   "500 ": {
     slidesPerView: 4,
-    spaceBetween: 20,
+    spaceBetween: 12,
   },
   "0": {
     slidesPerView: 3,

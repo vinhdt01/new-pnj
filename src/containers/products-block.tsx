@@ -88,7 +88,7 @@ const ProductsBlock: React.FC<ProductsProps> = ({
         sectionHeading={sectionHeading}
         categorySlug={categorySlug}
       /> */}
-
+      
       <ProductCard
         // key={`product--key`}
         // product={product}

@@ -217,9 +217,22 @@
 // };
 
 // export default Header;
+import Link from 'next/link'
 import HeaderMenu from './header-menu'
+import HeaderMobile from './header-mobile'
 import { useUI } from "@contexts/ui.context";
+
+import CartIcon from "@components/icons/cart-icon";
+import { useCart } from "@store/quick-cart/cart.context";
+import NewCartButton from '@components/cart/new-cart-button';
 const Header:React.FC= () => {
+
+	const { openCart } = useUI();
+	const { totalItems } = useCart();
+	function handleCartOpen() {
+	  return openCart();
+	}
+
 		const {
 		openSidebar,
 		setDrawerView,
@@ -248,9 +261,9 @@ const Header:React.FC= () => {
 		            </div>
 		            </div>
 		            
-		            <div>
+		            <Link href="/">
 		              <img className="w-[88px] h-[38.7px] cursor-pointer" src="https://cdn.pnj.io/images/logo/pnj.com.vn.png" />
-		            </div>
+		            </Link>
 		            
 		            <div className="flex cursor-pointer">
 		            <div className="flex  items-center">
@@ -261,9 +274,15 @@ const Header:React.FC= () => {
 		                <img className="w-[19px] h-[14px]" src="https://cdn.pnj.io/images/image-update/layout/icon-stores-new.svg" alt="Cửa hàng"/>
 		                  <div className="mx-2">Lịch sử đơn hàng</div>
 		            </div>
-		            <div className="flex  items-center">
-		                <img className="w-[19px] h-[14px]" src="https://cdn.pnj.io/images/image-update/layout/icon-cart-new.svg" alt="Giỏ hàng"/>
-		                <div className="mx-2">Giỏ hàng</div>
+		            <div className="flex  items-center"  onClick={handleCartOpen}>
+		                {/* <img className="w-[19px] h-[14px]" src="https://cdn.pnj.io/images/image-update/layout/icon-cart-new.svg" alt="Giỏ hàng"/>
+		               
+					  
+      <span className="cart-counter-badge flex items-center justify-center bg-red-600 text-white absolute  top-7 right-[420px]  rounded-full font-bold">
+        {totalItems}
+      </span> */}
+	  <NewCartButton/>
+					    <div className="mx-2">Giỏ hàng</div>
 		            </div>
 		            </div>
 		       </div>
@@ -271,32 +290,7 @@ const Header:React.FC= () => {
 			  <div className="max-w-[1300px] m-auto border-b-[1px] border-slate-100"></div>
 			  <HeaderMenu/>
 	      </div>
-		  <div className="xl:hidden flex justify-between items-center px-1  h-[50px]">
-			<img className="w-[71px] h-[30.8px]" src="https://cdn.pnj.io/images/logo/pnj.com.vn.png" />
-            <div className=" relative mx-8 flex-1">
-			{/* <input className="w-[100%] h-[28px] flex-1  rounded-2xl pl-2 pr-7 outline-none border-[1px] border-slate-100 bg-[#ededed] placeholder:text-[13px]" type="text" placeholder="Tìm kiếm nhanh"/> */}
-				<button
-							className="flex items-center justify-center flex-shrink-0 h-auto relative focus:outline-none transform w-[100%]"
-							onClick={openSearch}
-							aria-label="search-button"
-						>
-									<input className="w-[100%] h-[28px] flex-1  rounded-2xl pl-2 pr-7 outline-none border-[1px] border-slate-100 bg-[#ededed] placeholder:text-[13px]" type="text" placeholder="Tìm kiếm nhanh"/>
-
-						</button>
-			<img
-              className=" absolute top-[6px] right-3 bg-[#ededed]"
-              src="https://cdn.pnj.io/images/image-update/layout/mobile/find-icon.svg"
-              alt="Tìm kiếm nhanh"
-            />
-			</div>
-			<div className="mr-1">
-				<img src="https://cdn.pnj.io/images/image-update/layout/mobile/icon-shoppingcart.svg"/>
-				<div className="absolute text-center w-[12px] h-[12px] text-[10px] top-8 right-1 rounded-lg px-[1.5px] py-0 bg-red-600 text-[#fff]">
-					0
-				</div>
-			</div>
-
-		  </div>
+		  <HeaderMobile openSearch={openSearch} />
       </div>
     );
   }

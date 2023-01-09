@@ -90,6 +90,7 @@ interface ProductsProps {
   className?: string;
   variant?: "flat" | "left" | "center" | "combined" | "fashion";
   limit?: number;
+  title?:string
 }
 
 const ProductsFeatured: React.FC<ProductsProps> = ({
@@ -98,6 +99,7 @@ const ProductsFeatured: React.FC<ProductsProps> = ({
   className = "mb-12 md:mb-14 xl:mb-16",
   variant = "left",
   limit = 5,
+  title=""
 }) => {
   // const { t } = useTranslation();
 
@@ -128,7 +130,7 @@ const products = {
         sectionHeading={sectionHeading}
         categorySlug={categorySlug}
       /> */}
-       <h1 className="text-[#003868] text-[20px] font-bold">Sản Phẩm Bán Chạy</h1>
+      <h1  className="text-[#003868] text-[20px] font-bold">{title}</h1>
       {/* {error && <Alert message={error.message} />} */}
 
       <div className="grid grid-cols-4 grid-rows-2 gap-3 md:gap-5 xl:gap-7">

@@ -147,7 +147,7 @@ import { useUI } from "@contexts/ui.context";
 import usePrice from "@lib/use-price";
 import { Product } from "@framework/types";
 import { useSettings } from "@contexts/settings.context";
-
+import Link from 'next/link';
 interface ProductProps {
   product: Product;
   index: number;
@@ -209,66 +209,68 @@ const ProductOverlayCard: React.FC<ProductProps> = ({
   }
 
   return (
-    <div
-      onClick={handlePopupView}
-      className={`${classes} cursor-pointer group flex flex-col bg-gray-200 rounded-md relative items-center justify-between overflow-hidden`}
-    >
+   <Link href="/products/ad">
       <div
-        className={`relative flex justify-center items-center p-4 h-full 3xl:min-h-[330px] ${indexes.includes(index) && variant === "fashion" ? "lg:col-span-2" : ""}`}
-        title='sfsdfdssfds'
+        // onClick={handlePopupView}
+        className={`${classes} cursor-pointer group flex flex-col bg-gray-200 rounded-md relative items-center justify-between overflow-hidden`}
       >
-        <img
-          src="https://cdn.pnj.io/images/thumbnails/300/300/detailed/124/gvxmxmc000267-vong-tay-kim-tien-vang-y-18k-dinh-da-cz-pnj-01.png"
-          // width={size}
-          // height={size}
-          // loading={imgLoading}
-          // alt={product?.name || "Product Image"}
-          className="object-cover transition duration-500 ease-in-out transform group-hover:scale-110"
-        />
-                <img className="absolute right-1 bottom-1 w-9 h-9" src="https://cdn.pnj.io/images/image-update/tag-product/icon-tragop-2.svg"/>
-
-      </div>
+        <div
+          className={`relative flex justify-center items-center p-4 h-full 3xl:min-h-[330px] ${indexes.includes(index) && variant === "fashion" ? "lg:col-span-2" : ""}`}
+          title='sfsdfdssfds'
+        >
+          <img
+            src="https://cdn.pnj.io/images/thumbnails/300/300/detailed/124/gvxmxmc000267-vong-tay-kim-tien-vang-y-18k-dinh-da-cz-pnj-01.png"
+            // width={size}
+            // height={size}
+            // loading={imgLoading}
+            // alt={product?.name || "Product Image"}
+            className="object-cover transition duration-500 ease-in-out transform group-hover:scale-110"
+          />
+                  <img className="absolute right-1 bottom-1 w-9 h-9" src="https://cdn.pnj.io/images/image-update/tag-product/icon-tragop-2.svg"/>
+  
+        </div>
+       
+          <span className="absolute top-3.5 md:top-5 3xl:top-7 ltr:left-3.5 rtl:right-3.5 ltr:md:left-5 ltr:3xl:left-7 rtl:md:right-5 rtl:3xl:right-7 bg-heading text-white text-10px md:text-sm leading-5 rounded-md inline-block px-2 xl:px-3 pt-0.5 pb-1">
+           15
+          </span>
+        <div
+          className="flex flex-col items-center justify-center text-center px-4 py-4 text-[14px]"
+          title="hello"
+        >
+          {/* <div className={`${indexes.includes(index) && variant === "fashion" ? "lg:pb-4 2xl:pb-8 ltr:md:pr-2 rtl:md:pl-2" : "ltr:md:pr-2 ltr:lg:pr-0 ltr:2xl:pr-2 rtl:md:pl-2 rtl:lg:pl-0 rtl:2xl:pl-2"} overflow-hidden`}>
+            <h2 className="text-heading font-semibold text-sm md:text-base xl:text-lg mb-1 truncate">
+            Mặt dây chuyền Kim cương Vàng trắng 14K PNJ DDDDW000355
+            </h2>
+            <p className="text-body text-xs md:text-[13px] xl:text-sm leading-normal xl:leading-relaxed truncate max-w-[250px] lg:max-w-[190px]">
+              Kim cương
+            </p>
+          </div>
+          <div className={`flex-shrink-0 flex flex-row-reverse md:flex-col lg:flex-row-reverse 2xl:flex-col justify-end mt-2 md:-mt-0.5 lg:mt-2 2xl:-mt-0.5 ${indexes.includes(index) && variant === "fashion" ? "" : "items-center md:items-end lg:items-start 2xl:items-end ltr:md:text-right rtl:md:text-left ltr:lg:text-left rtl:lg:text-right ltr:xl:text-right rtl:xl:text-left"}`}>
      
-        <span className="absolute top-3.5 md:top-5 3xl:top-7 ltr:left-3.5 rtl:right-3.5 ltr:md:left-5 ltr:3xl:left-7 rtl:md:right-5 rtl:3xl:right-7 bg-heading text-white text-10px md:text-sm leading-5 rounded-md inline-block px-2 xl:px-3 pt-0.5 pb-1">
-         15
-        </span>
-      <div
-        className="flex flex-col items-center justify-center text-center px-4 py-4 text-[14px]"
-        title="hello"
-      >
-        {/* <div className={`${indexes.includes(index) && variant === "fashion" ? "lg:pb-4 2xl:pb-8 ltr:md:pr-2 rtl:md:pl-2" : "ltr:md:pr-2 ltr:lg:pr-0 ltr:2xl:pr-2 rtl:md:pl-2 rtl:lg:pl-0 rtl:2xl:pl-2"} overflow-hidden`}>
-          <h2 className="text-heading font-semibold text-sm md:text-base xl:text-lg mb-1 truncate">
-          Mặt dây chuyền Kim cương Vàng trắng 14K PNJ DDDDW000355
-          </h2>
-          <p className="text-body text-xs md:text-[13px] xl:text-sm leading-normal xl:leading-relaxed truncate max-w-[250px] lg:max-w-[190px]">
-            Kim cương
-          </p>
-        </div>
-        <div className={`flex-shrink-0 flex flex-row-reverse md:flex-col lg:flex-row-reverse 2xl:flex-col justify-end mt-2 md:-mt-0.5 lg:mt-2 2xl:-mt-0.5 ${indexes.includes(index) && variant === "fashion" ? "" : "items-center md:items-end lg:items-start 2xl:items-end ltr:md:text-right rtl:md:text-left ltr:lg:text-left rtl:lg:text-right ltr:xl:text-right rtl:xl:text-left"}`}>
-   
-           
-    
-            <>
-          
-                <del className="text-sm md:text-base lg:text-sm xl:text-base 3xl:text-lg">
-             30
-                </del>
-              
-              <div className="text-heading font-segoe font-semibold text-base xl:text-xl 3xl:text-2xl 3xl:mt-0.5 ltr:pr-2 ltr:md:pr-0 ltr:lg:pr-2 ltr:2xl:pr-0 rtl:pl-2 rtl:md:pl-0 rtl:lg:pl-2 rtl:2xl:pl-0">
-               25
-              </div>
-            </>
+             
       
-        </div> */}
-        <div className="sm:h-auto h-[45px] overflow-hidden">Mặt dây chuyền Kim cương Vàng trắng 14K PNJ DDDDW000355</div>
-        <div className="text-[#c48c46]">10.617.000 đ</div>
-        <div className="text-[#eb4d4e] text-[11px]">Mua Online giảm thêm đến 750.000đ</div>
-        <div className="flex justify-between w-[100%] text-[11px]">
-          <div>5(4)</div>
-          <div>2000+ đã bán</div>
+              <>
+            
+                  <del className="text-sm md:text-base lg:text-sm xl:text-base 3xl:text-lg">
+               30
+                  </del>
+                
+                <div className="text-heading font-segoe font-semibold text-base xl:text-xl 3xl:text-2xl 3xl:mt-0.5 ltr:pr-2 ltr:md:pr-0 ltr:lg:pr-2 ltr:2xl:pr-0 rtl:pl-2 rtl:md:pl-0 rtl:lg:pl-2 rtl:2xl:pl-0">
+                 25
+                </div>
+              </>
+        
+          </div> */}
+          <div className="sm:h-auto h-[45px] overflow-hidden">Mặt dây chuyền Kim cương Vàng trắng 14K PNJ DDDDW000355</div>
+          <div className="text-[#c48c46]">10.617.000 đ</div>
+          <div className="text-[#eb4d4e] text-[11px]">Mua Online giảm thêm đến 750.000đ</div>
+          <div className="flex justify-between w-[100%] text-[11px]">
+            <div>5(4)</div>
+            <div>2000+ đã bán</div>
+          </div>
         </div>
       </div>
-    </div>
+   </Link>
   );
 };
 

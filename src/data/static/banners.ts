@@ -6,12 +6,12 @@ export const masonryBanner = [
     slug: "mens-collection",
     image: {
       mobile: {
-        url: "https://cdn.pnj.io/images/promo/149/ATL_494x247_STYLE_XUAN2023_CTA.png",
+        url: "https://cdn.pnj.io/images/promo/90/op_sweet_spring_1200x450.jpg",
         width: 470,
         height: 232,
       },
       desktop: {
-        url: "https://cdn.pnj.io/images/promo/149/ATL_494x247_STYLE_XUAN2023_CTA.png",
+        url: "https://cdn.pnj.io/images/promo/90/op_sweet_spring_1200x450.jpg",
         width: 1078,
         height: 425,
       },
@@ -60,12 +60,12 @@ export const masonryBanner = [
     slug: "exclusive-sunglasses",
     image: {
       mobile: {
-        url: "/assets/images/banner/masonry/banner-mobile-4.jpg",
+        url: "https://cdn.pnj.io/images/promo/146/Mickey.jpg",
         width: 232,
         height: 232,
       },
       desktop: {
-        url: "/assets/images/banner/masonry/banner-4.jpg",
+        url: "https://cdn.pnj.io/images/promo/146/Mickey.jpg",
         width: 425,
         height: 425,
       },
@@ -78,12 +78,12 @@ export const masonryBanner = [
     slug: "product-coupons",
     image: {
       mobile: {
-        url: "/assets/images/banner/masonry/banner-mobile-5.jpg",
+        url: "https://cdn.pnj.io/images/promo/148/block-brands-watch.png",
         width: 232,
         height: 232,
       },
       desktop: {
-        url: "/assets/images/banner/masonry/banner-5.jpg",
+        url: "https://cdn.pnj.io/images/promo/148/block-brands-watch.png",
         width: 425,
         height: 425,
       },
@@ -96,12 +96,12 @@ export const masonryBanner = [
     slug: "new-backpack",
     image: {
       mobile: {
-        url: "/assets/images/banner/masonry/banner-mobile-6.jpg",
+        url: "https://cdn.pnj.io/images/promo/149/Phong_Thuy_1200x450.jpg",
         width: 470,
         height: 232,
       },
       desktop: {
-        url: "/assets/images/banner/masonry/banner-6.jpg",
+        url: "https://cdn.pnj.io/images/promo/149/Phong_Thuy_1200x450.jpg",
         width: 1078,
         height: 425,
       },
