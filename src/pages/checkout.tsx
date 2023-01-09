@@ -100,7 +100,7 @@ import Divider from "@components/ui/divider";
 import Container from "@components/ui/container";
 import Subscription from "@components/common/subscription";
 
-export { getStaticProps } from "@framework/ssr/common";
+// export { getStaticProps } from "@framework/ssr/common";
 
 const ScheduleGrid = dynamic(
   () => import("@components/checkout/schedule/schedule-grid")

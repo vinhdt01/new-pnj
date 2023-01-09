@@ -24,7 +24,7 @@ import {
   classicDemoBannerThree as bannerThree
 } from "@data/static/banners";
 
-export { getStaticProps } from "@framework/ssr/homepage/classic";
+// export { getStaticProps } from "@framework/ssr/homepage/classic";
 
 export default function Home() {
   return (
